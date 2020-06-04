@@ -1,12 +1,9 @@
 ## Install
 
 ```sh
-npm install bulma-start
-```
-_or_
-
-```sh
-yarn add bulma-start
+clone repo
+npm install
+npm start
 ```
 
 ## What's included
