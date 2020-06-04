@@ -1,0 +1,62 @@
+.header {
+    min-height: 124px;
+
+    &__logo {
+        display: flex;
+    }
+}
+
+.hero {
+    min-height: 37.5rem /* 600/16 */;
+    background: transparent url('../assets/euronics_kv_rgb.png') no-repeat top center;
+    background-size: auto 100%;
+    color: rgba($white, 0.9);
+
+    &__wrapper {
+        padding: 80px 80px 0 110px;
+    }
+
+    &__overtitle {
+        font-size: 1.5rem /* 24/16 */;
+        font-weight: $font-bold;
+        line-height: 2.0625rem /* 33/16 */;
+        margin-bottom: 5px;
+    }
+
+    &__title {
+        font-size: 3.75rem /* 60/16 */;
+        font-weight: $font-extrabold;
+        line-height: 4rem /* 64/16 */;
+        margin-bottom: 10px;
+    }
+
+    &__text{
+        font-size: 1.5rem /* 24/16 */;
+        font-weight: $font-bold;
+        line-height: 2.0625rem /* 33/16 */;
+    }
+
+    &__circle {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        position: relative;
+        top: 53px;
+        left: -123px;
+        text-align: center;
+        width: 138px;
+        height: 138px;
+        border-radius: 50%;
+        background-image: radial-gradient(#0069B2, #00468B);
+    }
+}
+
+.circle {
+    &__price {
+        font-size: 2.25rem /* 36/16 */;
+        line-height: 1em;
+        font-weight: $font-bold;
+        color: rgba($white, 0.9);
+    }
+}
