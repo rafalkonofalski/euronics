@@ -1,4 +1,30 @@
 .section-6 {
-    background-color: $blue;
-    color: $white;
+    background-color: $color-dark-background;
+
+    .section__title {
+        margin-bottom: 1.25rem /* 20/16 */;
+    }
+
+    &__content {
+        min-height: 408px;
+        max-width: 98%;
+        margin: 0 auto;
+
+        @media screen and (min-width: $desktop) {
+            background: transparent url('../assets/infograph.svg') no-repeat center 92px;
+        }
+    }
+}
+
+.section-6-item {
+    padding: 0 15px;
+    margin-bottom: 1.5625rem /* 25/16 */;
+
+    @media screen and (min-width: $desktop) {
+        margin-bottom: 6.375rem /* 102/16 */;
+    }
+
+    &__icon {
+        margin-bottom: 2.125rem /* 34/16 */;
+    }
 }

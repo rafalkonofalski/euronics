@@ -1,3 +1,14 @@
 .image-broken-phone {
     margin-top: -60px;
 }
+
+.columns {
+    margin: 0;
+}
+
+@media screen and (min-width: $tablet) {
+    .columns {
+        margin-left: -0.75rem;
+        margin-right: -0.75rem;
+    }
+}

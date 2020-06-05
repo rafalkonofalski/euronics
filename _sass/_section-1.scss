@@ -1,10 +1,16 @@
 .section-1-item {
     display: flex;
     align-items: center;
-    margin-bottom: 5.3125rem /* 85/16 */;
+    margin-bottom: 1.875rem /* 30/16 */;
+
+    @media screen and (min-width: $desktop) {
+        margin-bottom: 5.3125rem /* 85/16 */;
+    }
 
     &--top-space {
-        padding-top: 80px;
+        @media screen and (min-width: $desktop) {
+            padding-top: 80px;
+        }
     }
 
     &__icon {

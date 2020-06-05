@@ -1,21 +1,5 @@
 .section-5 {
-    .section__title {
-        margin-bottom: 1.25rem /* 20/16 */;
-    }
-
-    &__content {
-        background: transparent url('../assets/infograph.svg') no-repeat center 92px;
-        min-height: 408px;
-        max-width: 98%;
-        margin: 0 auto;
-    }
-}
-
-.section-5-item {
-    padding: 0 15px;
-    margin-bottom: 6.375rem /* 102/16 */;
-
-    &__icon {
-        margin-bottom: 2.125rem /* 34/16 */;
-    }
+    background-color: $color-dark-background;
+    position: relative;
+    z-index: -2;
 }

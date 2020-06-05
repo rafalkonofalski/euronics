@@ -12,29 +12,46 @@
     background: transparent url('../assets/euronics_kv_rgb.png') no-repeat top center;
     background-size: auto 100%;
     color: rgba($white, 0.9);
+    position: relative;
 
     &__wrapper {
-        padding: 80px 80px 0 110px;
+        padding: 20px 20px 0;
+
+        @media screen and (min-width: $desktop) {
+            padding: 80px 80px 0 110px;
+        }
     }
 
     &__overtitle {
-        font-size: 1.5rem /* 24/16 */;
+        font-size: 1.125rem /* 18/16 */;
         font-weight: $font-bold;
         line-height: 2.0625rem /* 33/16 */;
         margin-bottom: 5px;
+
+        @media screen and (min-width: $desktop) {
+            font-size: 1.5rem /* 24/16 */;
+        }
     }
 
     &__title {
-        font-size: 3.75rem /* 60/16 */;
+        font-size: 1.75rem /* 28/16 */;
         font-weight: $font-extrabold;
         line-height: 4rem /* 64/16 */;
-        margin-bottom: 10px;
+
+        @media screen and (min-width: $desktop) {
+            font-size: 3.75rem /* 60/16 */;
+            margin-bottom: 10px;
+        }
     }
 
     &__text{
-        font-size: 1.5rem /* 24/16 */;
+        font-size: 1.25rem /* 20/16 */;
         font-weight: $font-bold;
         line-height: 2.0625rem /* 33/16 */;
+
+        @media screen and (min-width: $desktop) {
+            font-size: 1.5rem /* 24/16 */;
+        }
     }
 
     &__circle {
@@ -43,13 +60,31 @@
         align-items: center;
         flex-direction: column;
         position: relative;
-        top: 53px;
-        left: -123px;
+        top: 153px;
+        left: 0;
         text-align: center;
         width: 138px;
         height: 138px;
         border-radius: 50%;
         background-image: radial-gradient(#0069B2, #00468B);
+
+        @media screen and (min-width: $desktop) {
+            top: 53px;
+            left: -123px;
+        }
+    }
+
+    &__bottom {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        font-size: .6875rem /* 11/16 */;
+
+        .container {
+            margin: 0 auto;
+        }
     }
 }
 

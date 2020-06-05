@@ -1,8 +1,16 @@
+.table-wrapper {
+    max-width: 100%;
+}
+
 .table-offer {
     table-layout: fixed;
     border-collapse: separate;
-    border-spacing: 30px 0;
+    border-spacing: 10px 0;
     color: rgba($black, 0.75);
+
+    @media screen and (min-width: $desktop) {
+        border-spacing: 30px 0;
+    }
 
     thead {
         th {
@@ -11,12 +19,18 @@
             &:not(:first-child) {
                 background-color: $blue;
                 color: $white;
-                font-size: 1.5rem /* 24/16 */;
+                font-size: .875rem /* 14/16 */;
                 font-weight: $font-extrabold;
-                line-height: 2.375rem /* 38/16 */;
-                padding: 30px;
+                line-height: 1.125rem /* 18/16 */;
+                padding: 10px;
                 border-radius: 10px 10px 0 0;
                 @include shadowed(10px, 10px, 0, 0);
+
+                @media screen and (min-width: $desktop) {
+                    font-size: 1.5rem /* 24/16 */;
+                    line-height: 2.375rem /* 38/16 */;
+                    padding: 30px;
+                }
             }
         }
     }
@@ -28,9 +42,15 @@
     tbody {
         td {
             vertical-align: middle;
-            padding: 1.75rem /* 28/16 */;
+            padding: .625rem /* 10/16 */;
             position: relative;
             background-color: $white;
+            font-size: .8125rem /* 13/16 */;
+
+            @media screen and (min-width: $desktop) {
+                padding: 1.75rem /* 28/16 */;
+                font-size: 1rem /* 16/16 */;
+            }
 
             &:not(:first-child) {
                 @include shadowed;
@@ -38,6 +58,7 @@
 
             &:first-of-type {
                 font-weight: $font-bold;
+                background-color: transparent;
             }
 
             &::after {
@@ -47,9 +68,14 @@
                 background-color: $color-table-border;
                 position: absolute;
                 bottom: 0;
-                left: 1.75rem;
-                right: 1.75rem;
+                left: .625rem /* 10/16 */;
+                right: .625rem /* 10/16 */;
                 z-index: 1;
+
+                @media screen and (min-width: $desktop) {
+                    left: 1.75rem;
+                    right: 1.75rem;
+                }
             }
         }
 
@@ -81,8 +107,9 @@
     }
 
     &__icon-wrapper {
-        margin: 0 -15px 20px;
+        margin: 0 -15px 10px;
         display: flex;
+        flex-wrap: wrap;
 
         &--top-spacing {
             margin-top: 20px;
@@ -90,6 +117,7 @@
 
         img {
             flex-shrink: 0;
+            margin-bottom: 10px;
         }
     }
 }

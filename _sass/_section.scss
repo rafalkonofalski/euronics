@@ -6,9 +6,18 @@
         font-weight: $font-extrabold;
         line-height: 2.375rem /* 38/16 */;
         margin-bottom: 1.5625rem /* 25/16 */;
+        padding: 0 10px;
+
+        @media screen and (min-width: $desktop) {
+            padding: 0;
+        }
 
         &--blue {
             color: $blue;
+        }
+
+        &--yellow {
+            color: $yellow;
         }
     }
 
