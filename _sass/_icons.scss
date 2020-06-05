@@ -1,0 +1,13 @@
+.icon {
+    display: inline-block;
+    vertical-align: middle;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-color: transparent;
+
+    &--angle {
+        background-image: url('../assets/down.svg');
+        width: 30px;
+        height: 30px;
+    }
+}

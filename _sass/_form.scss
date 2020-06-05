@@ -1,0 +1,67 @@
+.form {
+    max-width: 750px;
+    margin: 0 auto;
+
+    &__input {
+        position: relative;
+
+        [type="text"],
+        [type="email"],
+        textarea {
+            width: 100%;
+            overflow: visible;
+            padding: 10px 17px;
+            font-size: 1rem /* 16/16 */;
+            line-height: 1.5rem /* 24/16 */;
+            transition: all .5s ease;
+            border: 1px solid $color-input-border;
+            border-radius: 3px;
+
+            &:focus {
+                + label {
+                    transform: scale(1) translate(10px, -72px);
+                    opacity: 1;
+                }
+            }
+        }
+
+        [type="text"],
+        [type="email"] {
+            height: 3.75rem /* 60/16 */;
+        }
+
+        label {
+            display: inline-block;
+            font-size: .8125rem /* 13/16 */;
+            color: rgba($black, 0.75);
+            position: relative;
+            background-color: $white;
+            padding: 4px 6px 4px 10px;
+            transform: scale(1.2) translate(12px, -36px);
+            opacity: 1;
+            transition: all .35s ease;
+        }
+
+        textarea {
+            height: 152px;
+
+            + label {
+                transform: scale(1.2) translate(12px, -123px);
+            }
+
+            &:focus {
+                + label {
+                    transform: scale(1) translate(12px, -171px);
+                }
+            }
+        }
+
+        [type="submit"] {
+            font-weight: $font-bold;
+            padding: 22px 50px;
+            border: 0;
+            background-color: $yellow-alternative;
+            cursor: pointer;
+        }
+    }
+}

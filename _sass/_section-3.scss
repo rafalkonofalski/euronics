@@ -1,0 +1,12 @@
+.section-3-item {
+    text-align: center;
+
+    &__icon {
+        margin-bottom: 1.25rem /* 20/16 */;
+    }
+
+    &__title {
+        font-weight: $font-bold;
+        margin-bottom: 1.25rem /* 20/16 */;
+    }
+}

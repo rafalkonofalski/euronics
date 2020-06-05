@@ -1,0 +1,20 @@
+.section-2 {
+    min-height: 38.875rem /* 622/16 */;
+    background: transparent url('../assets/foto2.png') no-repeat top center;
+    background-size: auto 100%;
+    display: flex;
+    align-items: center;
+
+    &__content {
+        max-width: 38.4375rem /* 615/16 */;
+        background-color: rgba($white, 0.8);
+        border-radius: 10px;
+        padding: 30px;
+
+        p {
+            &:not(:last-child) {
+                margin-bottom: 1.75rem /* 28/16 */;
+            }
+        }
+    }
+}

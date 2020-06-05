@@ -1,0 +1,16 @@
+.footer {
+    background-color: $color-dark-background;
+    min-height: 220px;
+    padding: 72px 20px 30px;
+
+    &__label {
+        font-size: .75rem /* 12/16 */;
+        font-weight: $font-bold;
+        text-transform: uppercase;
+    }
+
+    &__copyright {
+        font-size: .625rem /* 10/16 */;
+        color: rgba($black, 0.4);
+    }
+}

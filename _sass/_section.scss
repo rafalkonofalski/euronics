@@ -1,0 +1,18 @@
+.section {
+    padding: 50px 0;
+
+    &__title {
+        font-size: 2rem /* 32/16 */;
+        font-weight: $font-extrabold;
+        line-height: 2.375rem /* 38/16 */;
+        margin-bottom: 1.5625rem /* 25/16 */;
+
+        &--blue {
+            color: $blue;
+        }
+    }
+
+    &__subtitle {
+        margin-bottom: 1.5625rem /* 25/16 */;
+    }
+}

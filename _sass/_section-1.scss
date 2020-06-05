@@ -1,0 +1,17 @@
+.section-1-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5.3125rem /* 85/16 */;
+
+    &--top-space {
+        padding-top: 80px;
+    }
+
+    &__icon {
+        flex-shrink: 0;
+    }
+
+    &__text {
+        padding-left: 2.5rem /* 40/16 */
+    }
+}

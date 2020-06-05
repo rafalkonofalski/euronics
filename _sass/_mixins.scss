@@ -1,0 +1,15 @@
+@mixin shadowed($a: 0, $b: 0, $c: 0, $d: 0) {
+    &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+        background-color: rgba($black, 0.5);
+        box-shadow: 0 0 10px rgba($black, 0.5);
+        border-radius: $a $b $c $d;
+    }
+}
