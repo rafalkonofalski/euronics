@@ -3,10 +3,21 @@
     min-height: 220px;
     padding: 72px 20px 30px;
 
+    .columns {
+        margin-bottom: 0;
+    }
+
+    .column {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
     &__label {
         font-size: .75rem /* 12/16 */;
         font-weight: $font-bold;
+        letter-spacing: 2px;
         text-transform: uppercase;
+        padding: 16px 0 22px;
     }
 
     &__copyright {

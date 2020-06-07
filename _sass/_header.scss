@@ -69,8 +69,12 @@
         background-image: radial-gradient(#0069B2, #00468B);
 
         @media screen and (min-width: $desktop) {
-            top: 53px;
+            top: 3px;
             left: -123px;
+        }
+
+        @media screen and (min-width: $widescreen) {
+            top: 53px;
         }
     }
 
