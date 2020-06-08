@@ -3,94 +3,148 @@
 }
 
 .table-offer {
-    table-layout: fixed;
-    border-collapse: separate;
-    border-spacing: 10px 0;
     color: rgba($black, 0.75);
 
     @media screen and (min-width: $desktop) {
-        border-spacing: 30px 0;
+        // border-spacing: 30px 0;
     }
 
-    thead {
-        th {
-            position: relative;
+    &__header {
+        font-size: 0.875rem /* 14/16 */;
+        line-height: 1.125rem /* 18/16 */;
+        padding: 20px 30px;
+        display: flex;
+        align-items: center;
 
-            &:not(:first-child) {
+        @media screen and (min-width: $desktop) {
+            min-height: 110px;
+            padding: 10px;
+        }
+
+        @media screen and (min-width: $desktop) {
+            font-size: 1.5rem /* 24/16 */;
+            line-height: 2.375rem /* 38/16 */;
+            padding: 10px 30px;
+        }
+    }
+
+    &__column {
+        &:not(.table-offer__column--first) {
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba($black, 0.1);
+
+            .table-offer__header {
                 background-color: $blue;
                 color: $white;
-                font-size: .875rem /* 14/16 */;
                 font-weight: $font-extrabold;
-                line-height: 1.125rem /* 18/16 */;
-                padding: 10px;
                 border-radius: 10px 10px 0 0;
-                @include shadowed(10px, 10px, 0, 0);
+            }
+        }
+
+        &--first {
+            display: none;
+
+            @media screen and (min-width: $tablet) {
+                display: block;
+            }
+
+            .table-offer__row {
+                background-color: transparent;
+                padding: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-weight: $font-bold;
+                text-align: center;
+
+                @media screen and (min-width: $tablet) {
+                    text-align: left;
+                    align-items: flex-start;
+                    padding-left: 20px;
+                }
 
                 @media screen and (min-width: $desktop) {
-                    font-size: 1.5rem /* 24/16 */;
-                    line-height: 2.375rem /* 38/16 */;
-                    padding: 30px;
+                    align-items: center;
+                    justify-content: flex-start;
+                    text-align: left;
+                }
+
+                &::after {
+                    @media screen and (min-width: $desktop) {
+                        left: 0;
+                        right: 0;
+                    }
                 }
             }
         }
     }
 
-    th {
-        width: 33%;
-    }
+    &__row {
+        padding: .625rem /* 10/16 */ 1.75rem /* 10/16 */;
+        position: relative;
+        background-color: $white;
+        font-size: 0.8125rem /* 13/16 */;
+        height: 110px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
 
-    tbody {
-        td {
-            vertical-align: middle;
-            padding: .625rem /* 10/16 */;
+        @media screen and (min-width: $desktop) {
+            padding: 1.25rem /* 20/16 */ 1.75rem /* 10/16 */;
             position: relative;
-            background-color: $white;
-            font-size: .8125rem /* 13/16 */;
+            font-size: 1rem /* 16/16 */;
+            flex-direction: row;
+        }
+
+        &--centered {
+            justify-content: center;
+        }
+
+        &-label {
+            margin-bottom: 15px;
+            font-weight: $font-bold;
+            text-align: center;
 
             @media screen and (min-width: $desktop) {
-                padding: 1.75rem /* 28/16 */;
-                font-size: 1rem /* 16/16 */;
-            }
-
-            &:not(:first-child) {
-                @include shadowed;
-            }
-
-            &:first-of-type {
-                font-weight: $font-bold;
-                background-color: transparent;
-            }
-
-            &::after {
-                content: '';
-                display: block;
-                height: 1px;
-                background-color: $color-table-border;
-                position: absolute;
-                bottom: 0;
-                left: .625rem /* 10/16 */;
-                right: .625rem /* 10/16 */;
-                z-index: 1;
-
-                @media screen and (min-width: $desktop) {
-                    left: 1.75rem;
-                    right: 1.75rem;
-                }
+                display: none;
             }
         }
 
-        tr {
-            &:last-child {
-                td {
-                    &::after {
-                        display: none;
-                    }
+        &::after {
+            content: '';
+            display: block;
+            height: 1px;
+            background-color: $color-table-border;
+            position: absolute;
+            bottom: 0;
+            left: 0.625rem /* 10/16 */;
+            right: 0.625rem /* 10/16 */;
+            z-index: 1;
 
-                    &:not(:first-child) {
-                        border-radius: 0 0 10px 10px;
-                        @include shadowed(0, 0, 10px, 10px);
-                    }
-                }
+            @media screen and (min-width: $desktop) {
+                left: 1.75rem;
+                right: 1.75rem;
+            }
+        }
+
+        &:nth-of-type(2) {
+            height: auto;
+            min-height: 355px;
+
+            @media screen and (min-width: $tablet) {
+                min-height: 498px;
+            }
+
+            @media screen and (min-width: $widescreen) {
+                min-height: 392px;
+            }
+        }
+
+        &:last-of-type {
+            border-radius: 0 0 10px 10px;
+
+            &::after {
+                display: none;
             }
         }
     }
@@ -109,7 +163,11 @@
     &__icon-wrapper {
         margin: 0 -15px;
         display: flex;
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
+
+        @media screen and (min-width: $tablet) {
+            flex-wrap: wrap;
+        }
 
         &--top-spacing {
             margin-top: 20px;
@@ -118,6 +176,12 @@
         img {
             flex-shrink: 0;
             margin-bottom: 10px;
+            margin-right: -4px;
+            max-width: 20%;
+
+            @media screen and (min-width: $desktop) {
+                max-width: 100%;
+            }
         }
     }
 }

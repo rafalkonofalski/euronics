@@ -12,8 +12,10 @@
     }
 
     &--arrow-right {
-        background-image: url('../assets/arrow.svg');
+        background-image: url('../assets/arrow-right.svg');
         width: 28px;
         height: 36px;
+        position: relative;
+        top: -1px;
     }
 }

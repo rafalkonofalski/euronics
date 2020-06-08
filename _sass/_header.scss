@@ -14,8 +14,25 @@
     color: rgba($white, 0.9);
     position: relative;
 
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 1;
+        background-color: rgba($black, 0.4);
+
+        @media screen and (min-width: $tablet) {
+            display: none;
+        }
+    }
+
     &__wrapper {
         padding: 20px 20px 0;
+        position: relative;
+        z-index: 2;
 
         @media screen and (min-width: $desktop) {
             padding: 80px 80px 0 110px;
@@ -36,10 +53,11 @@
     &__title {
         font-size: 1.75rem /* 28/16 */;
         font-weight: $font-extrabold;
-        line-height: 4rem /* 64/16 */;
+        margin-bottom: 1.25rem /* 20/16 */;
 
         @media screen and (min-width: $desktop) {
             font-size: 3.75rem /* 60/16 */;
+            line-height: 4rem /* 64/16 */;
             margin-bottom: 10px;
         }
     }
@@ -60,13 +78,17 @@
         align-items: center;
         flex-direction: column;
         position: relative;
-        top: 153px;
+        top: 93px;
         left: 0;
         text-align: center;
         width: 138px;
         height: 138px;
         border-radius: 50%;
         background-image: radial-gradient(#0069B2, #00468B);
+
+        @media screen and (min-width: $tablet) {
+            top: 153px;
+        }
 
         @media screen and (min-width: $desktop) {
             top: 3px;

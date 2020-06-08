@@ -30,6 +30,14 @@
 
         article {
             padding: 20px 40px;
+
+            p {
+                margin-bottom: .9375rem /* 15/16 */;
+            }
+        }
+
+        strong {
+            color: inherit;
         }
     }
 }

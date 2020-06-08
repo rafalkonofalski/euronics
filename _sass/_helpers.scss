@@ -1,9 +1,28 @@
 .image-broken-phone {
-    margin-top: -60px;
+    @media screen and (min-width: $desktop) {
+        margin-top: -60px;
+    }
+
+    img {
+        max-width: 60%;
+
+        @media screen and (min-width: $desktop) {
+            max-width: 100%;
+        }
+    }
 }
 
 .columns {
     margin: 0;
+    padding: 0 15px;
+
+    @media screen and (min-width: 769px) {
+        margin: 0;
+    }
+
+    &--nopadding {
+        padding: 0 !important;
+    }
 }
 
 @media screen and (min-width: $tablet) {
@@ -19,4 +38,53 @@
 
 .has-margin-left-10 {
     margin-left: 10px;
+}
+
+.is-flex-column {
+    display: block;
+
+    @media screen and (min-width: $desktop) {
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+}
+
+// SLick styles
+
+.slick-slide {
+    background: $gray-alternative-2;
+}
+
+.slick-next,
+.slick-prev {
+    background: none;
+    width: 32px;
+    height: 32px;
+    z-index: 3;
+}
+
+.slick-next {
+    right: 0;
+
+    &::before {
+        content: '';
+        display: block;
+        width: 32px;
+        height: 32px;
+        background: transparent url('../assets/arrow-right.svg') no-repeat center center;
+    }
+}
+
+.slick-prev {
+    left: 5px;
+
+    &::before {
+        content: '';
+        display: block;
+        width: 20px;
+        height: 32px;
+        background: transparent url('../assets/arrow-right.svg') no-repeat center center;
+        transform: rotate(180deg);
+    }
 }

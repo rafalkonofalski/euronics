@@ -1,5 +1,13 @@
 .section-3 {
     background-color: $color-dark-background;
+
+    .section__title {
+        text-align: center;
+
+        @media screen and (min-width: $desktop) {
+            text-align: left;
+        }
+    }
 }
 
 .section-3-item {

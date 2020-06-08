@@ -57,7 +57,7 @@
         }
 
         label {
-            display: inline-block;
+            // display: inline-block;
             font-size: 0.8125rem /* 13/16 */;
             color: rgba($black, 0.75);
             position: relative;
@@ -66,6 +66,7 @@
             transform: scale(1.2) translate(12px, -36px);
             opacity: 1;
             transition: all 0.35s ease;
+            float: left;
         }
 
         textarea {
@@ -86,10 +87,19 @@
         [type='submit'] {
             font-size: 1rem /* 16/16 */;
             font-weight: $font-bold;
-            padding: 22px 50px;
+            padding: .9375rem /* 15/16 */ 2.125rem /* 34/16 */ .9375rem /* 15/16 */ 2.625rem /* 42/16 */;
             border: 0;
             background-color: $yellow-alternative;
             cursor: pointer;
+            max-height: 3.75rem /* 60/16 */;
         }
     }
+}
+
+.error-hint {
+    color: red;
+    font-size: .75rem /* 12/16 */;
+    float: left;
+    clear: left;
+    margin-top: -25px;
 }

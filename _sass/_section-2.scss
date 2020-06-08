@@ -17,4 +17,12 @@
             }
         }
     }
+
+    .section__title {
+        @media screen and (max-width: $tablet) {
+            font-size: 1.25rem /* 20/16 */;
+            line-height: 1.625rem /* 26/16 */;
+            padding: 0;
+        }
+    }
 }
