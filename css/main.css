@@ -1967,7 +1967,7 @@ a {
       .hero::before {
         display: none; } }
   .hero__wrapper {
-    padding: 20px 20px 0;
+    padding: 20px 0;
     position: relative;
     z-index: 2; }
     @media screen and (min-width: 1024px) {
@@ -2249,18 +2249,19 @@ a {
   .table-offer__header {
     font-size: 0.875rem;
     line-height: 1.125rem;
-    padding: 20px 30px;
+    padding: 20px;
     display: flex;
-    align-items: center; }
+    align-items: center;
+    white-space: nowrap; }
     @media screen and (min-width: 1024px) {
       .table-offer__header {
+        font-size: 1.1rem;
         min-height: 110px;
         padding: 10px; } }
-    @media screen and (min-width: 1024px) {
+    @media screen and (min-width: 1234px) {
       .table-offer__header {
         font-size: 1.5rem;
-        line-height: 2.375rem;
-        padding: 10px 30px; } }
+        line-height: 2.375rem; } }
   .table-offer__column:not(.table-offer__column--first) {
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); }
@@ -2301,23 +2302,27 @@ a {
     position: relative;
     background-color: #fff;
     font-size: 0.8125rem;
-    height: 110px;
+    height: 150px;
     display: flex;
     align-items: center;
     flex-direction: column; }
+    @media screen and (min-width: 769px) {
+      .table-offer__row {
+        height: 110px; } }
     @media screen and (min-width: 1024px) {
       .table-offer__row {
         padding: 1.25rem 1.75rem;
         position: relative;
         font-size: 1rem;
-        flex-direction: row; } }
+        flex-direction: row;
+        height: 110px; } }
     .table-offer__row--centered {
       justify-content: center; }
     .table-offer__row-label {
       margin-bottom: 15px;
       font-weight: 700;
       text-align: center; }
-      @media screen and (min-width: 1024px) {
+      @media screen and (min-width: 769px) {
         .table-offer__row-label {
           display: none; } }
     .table-offer__row::after {
@@ -2338,6 +2343,9 @@ a {
       height: auto;
       min-height: 355px; }
       @media screen and (min-width: 769px) {
+        .table-offer__row:nth-of-type(2) {
+          min-height: 360px; } }
+      @media screen and (min-width: 1024px) {
         .table-offer__row:nth-of-type(2) {
           min-height: 498px; } }
       @media screen and (min-width: 1234px) {
@@ -2418,11 +2426,8 @@ a {
       margin: 0; } }
   .columns--nopadding {
     padding: 0 !important; }
-
-@media screen and (min-width: 769px) {
-  .columns {
-    margin-left: -0.75rem;
-    margin-right: -0.75rem; } }
+  .columns--cleared {
+    clear: both; }
 
 .has-margin-right-10 {
   margin-right: 10px; }

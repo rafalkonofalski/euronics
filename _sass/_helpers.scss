@@ -23,12 +23,9 @@
     &--nopadding {
         padding: 0 !important;
     }
-}
 
-@media screen and (min-width: $tablet) {
-    .columns {
-        margin-left: -0.75rem;
-        margin-right: -0.75rem;
+    &--cleared {
+        clear: both;
     }
 }
 
