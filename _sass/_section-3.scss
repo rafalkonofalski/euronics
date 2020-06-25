@@ -21,5 +21,6 @@
     &__title {
         font-weight: $font-bold;
         margin-bottom: 1.25rem /* 20/16 */;
+        min-height: 3rem /* 48/16 */;
     }
 }

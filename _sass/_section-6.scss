@@ -10,7 +10,7 @@
 
         @media screen and (min-width: $desktop) {
             background: transparent url('../assets/infograph.svg') no-repeat center 92px;
-            background-size: 100%;
+            background-size: 95%;
         }
     }
 }
@@ -20,14 +20,24 @@
     margin-bottom: 1.5625rem /* 25/16 */;
 
     @media screen and (min-width: $desktop) {
-        margin-bottom: 1.25rem /* 20/16 */  ;
+        margin-bottom: 1.875rem /* 30/16 */;
     }
 
     @media screen and (min-width: $widescreen) {
-        margin-bottom: 6.375rem /* 102/16 */;
+        margin-bottom: 3.9375rem /* 63/16 */;
     }
 
     &__icon {
         margin-bottom: 2.125rem /* 34/16 */;
+    }
+
+    &__text {
+        @media screen and (min-width: $desktop) {
+            font-size: .8125rem /* 13/16 */;
+        }
+
+        @media screen and (min-width: $widescreen) {
+            font-size: 1rem /* 16/16 */;
+        }
     }
 }

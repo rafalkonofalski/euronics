@@ -1,5 +1,11 @@
 // empty
 .section-4 {
+    margin-bottom: 244px;
+
+    @media screen and (min-width: $desktop) {
+        margin-bottom: 296px;
+    }
+
     &__text {
         margin-bottom: 20px;
     }

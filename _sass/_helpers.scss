@@ -41,6 +41,7 @@
     display: block;
 
     @media screen and (min-width: $desktop) {
+        display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: flex-start;

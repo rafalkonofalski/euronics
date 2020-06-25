@@ -1,4 +1,26 @@
 .section-5 {
     background-color: $color-dark-background;
     position: relative;
+
+    > .container {
+        margin-top: -244px;
+
+        @media screen and (min-width: $tablet) {
+
+        }
+
+        @media screen and (min-width: $desktop) {
+            margin-top: -296px;
+        }
+    }
+
+    .section__title {
+        min-height: 4.75rem /* 76/16 */;
+        margin-bottom: 0;
+        font-size: 1.6rem;
+
+        @media screen and (min-width: $tablet) {
+            font-size: 2rem;
+        }
+    }
 }
